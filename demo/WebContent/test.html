@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<script type="text/javascript" src="scripts/jquery.min.js"></script>
+		<script type="text/javascript">
+			function checkAction(){
+				var ischeck = $("#ck").prop('checked');
+				console.log(ischeck);
+				if(ischeck){
+					$(".ck").each(function(i){
+						$(this).prop("checked",true);
+						console.log("选定循环次数："+i);
+					});
+					
+				}else{
+					$(".ck").each(function(i){
+						$(this).removeAttr("checked",false);
+						console.log("取消选定循环次数："+i);
+					});
+				}
+			}
+			
+			
+		</script>
+	</head>
+	<body>
+		<div class="checkboxdiv">
+			<input type="checkbox" name="ck" class="ck"/>姓名
+			<input type="checkbox" name="ck" class="ck"/>年龄
+			<input type="checkbox" name="ck" class="ck"/>收入
+			<input type="checkbox" name="ck" id="ck" onchange="checkAction();"/>选定
+		</div>
+	</body>
+</html>
