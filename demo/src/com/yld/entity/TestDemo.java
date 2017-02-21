@@ -39,10 +39,14 @@ public class TestDemo implements Comparable<Object>{
 		
 		return super.hashCode();
 	}
+	public boolean isTest(){
+		return true;
+	}
 	@Override
 	public String toString() {
 		return "TestDemo [name=" + name + ", age=" + age + "]";
 	}
+	
 	@Override
 	public int compareTo(Object o) {
 		if(o == null) return -1;
